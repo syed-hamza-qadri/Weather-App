@@ -64,7 +64,7 @@ function App() {
         {darkMode ? 'Light Mode' : 'Dark Mode'}
       </button>
 
-      <h1 className="text-4xl font-bold mb-10 uppercase">Weather App</h1>
+      <h1 className="text-4xl font-bold mb-9 uppercase">Weather App</h1>
       <select
         onChange={handleChange}
         value={cities.indexOf(chosen)}
