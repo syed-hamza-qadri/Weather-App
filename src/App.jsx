@@ -60,18 +60,17 @@ function App() {
     <div className={`min-h-screen flex flex-col items-center justify-center ${darkMode ? 'bg-gradient-to-b from-gray-800 to-gray-900' : 'bg-gradient-to-b from-blue-500 to-purple-900'} text-white py-20`}>
       <button
         onClick={() => setDarkMode(!darkMode)}
-        className={`absolute top-5 right-5 p-2 px-3 rounded-full  ${darkMode ? 'bg-gray-700' : 'bg-gray-300'} text-${darkMode ? 'white' : 'black'} transition-all`}
-      >
+        className={`absolute top-5 right-5 p-2 px-3 rounded-full ${darkMode ? 'bg-gray-700 text-white' : 'bg-gray-300 text-black'} transition-all`}>
         {darkMode ? 'Light Mode' : 'Dark Mode'}
       </button>
-      <h1 className="text-4xl font-bold mb-10 uppercase">Weather App Using React</h1>
+
+      <h1 className="text-4xl font-bold mb-10 uppercase">Weather App</h1>
       <select
         onChange={handleChange}
         value={cities.indexOf(chosen)}
-        className={`p-3 mb-5 border rounded-lg ${darkMode ? 'bg-gray-800 text-white border-gray-700' : 'bg-white text-gray-800 border-gray-300'} shadow-lg focus:outline-none focus:ring-2 focus:ring-blue-500`}
-      >
+        className={`p-3 mb-5 border rounded-lg ${darkMode ? 'bg-gray-800 text-white border-gray-700' : 'bg-white text-gray-800 border-gray-300'} shadow-lg focus:outline-none focus:ring-2 focus:ring-blue-500`}>
         {cities.map((data, ind) => (
-          <option key={ind} value={ind} className="dark:text-white">
+          <option key={ind} value={ind}>
             {data.name}
           </option>
         ))}
@@ -81,8 +80,7 @@ function App() {
         <img
           src={weatherIcon}
           alt={weather[0].description}
-          className="mx-auto"
-        />
+          className="mx-auto" />
         <h1 className="text-4xl font-bold uppercase">{name}</h1>
         <h2 className="text-3xl font-semibold mt-4">{weather[0].main}</h2>
         <h2 className="text-2xl my-4">
