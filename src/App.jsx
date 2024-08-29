@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import "./App.css"; // Ensure this includes Tailwind's base styles and dark mode
+import "./App.css";
 
 const cities = [
   { name: "Karachi", latitude: 24.8607, longitude: 67.0011 },
